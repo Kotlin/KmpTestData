@@ -5,12 +5,13 @@
 import Foundation
 import Shared
 
-/// Example 1: one class conforms to both a Swift protocol and Kotlin interface.
+/// One class conforms to both the Kotlin Repository protocol and a matching Swift protocol.
+/// "Go to Super" on fetchData should show a chooser with Kotlin and Swift destinations.
 class DualContractRepository: Repository, SwiftRepositoryContract {
 
     private var storage: [String: String] = [:]
 
-    // Go to Super should navigate to Repository.fetchData in Kotlin.
+    // UI test anchor: chooser item fetchData(String) navigates to Repository.fetchData in Kotlin.
     func fetchData(id: String) -> String {
         storage[id] ?? ""
     }
