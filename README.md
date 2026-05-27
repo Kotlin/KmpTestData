@@ -9,12 +9,12 @@ The multiple-choice fixture uses one Swift method that satisfies both a Kotlin-e
 
 | Case | Source file | Gutter anchor | Expected destination | Chooser item |
 | --- | --- | --- | --- | --- |
-| Kotlin interface implementation | `iosApp/iosApp/shared/SwiftRepository.swift` | `func fetchData(id: String) -> String` | `shared/src/commonMain/kotlin/org/jetbrains/kmptestdata/shared/Repository.kt`, `fun fetchData(id: String): String` | none |
-| Dropdown to Kotlin protocol declaration | `iosApp/iosApp/shared/SwiftRepositoryMultipleChoice.swift` | `func fetchData(id: String) -> String` | `shared/src/commonMain/kotlin/org/jetbrains/kmptestdata/shared/Repository.kt`, `fun fetchData(id: String): String` | `fetchData(String)` |
-| Dropdown to Swift protocol declaration | `iosApp/iosApp/shared/SwiftRepositoryMultipleChoice.swift` | `func fetchData(id: String) -> String` | `iosApp/iosApp/shared/SwiftRepository.swift`, `func fetchData(id: String) -> String` | `SwiftRepositoryContract` |
+| Kotlin interface implementation | `iosApp/iosApp/swiftTestFixtures/SwiftRepository.swift` | `func fetchData(id: String) -> String` | `shared/src/commonMain/kotlin/org/jetbrains/kmptestdata/shared/Repository.kt`, `fun fetchData(id: String): String` | none |
+| Dropdown to Kotlin protocol declaration | `iosApp/iosApp/swiftTestFixtures/SwiftRepositoryMultipleChoice.swift` | `func fetchData(id: String) -> String` | `shared/src/commonMain/kotlin/org/jetbrains/kmptestdata/shared/Repository.kt`, `fun fetchData(id: String): String` | `fetchData(String)` |
+| Dropdown to Swift protocol declaration | `iosApp/iosApp/swiftTestFixtures/SwiftRepositoryMultipleChoice.swift` | `func fetchData(id: String) -> String` | `iosApp/iosApp/swiftTestFixtures/SwiftRepository.swift`, `func fetchData(id: String) -> String` | `SwiftRepositoryContract` |
 
 The Kotlin fixture declaration is in `shared/src/commonMain/kotlin/org/jetbrains/kmptestdata/shared/Repository.kt`.
-The Swift fixtures are in `iosApp/iosApp/shared/SwiftRepository.swift` and `iosApp/iosApp/shared/SwiftRepositoryMultipleChoice.swift`.
+The Swift fixtures are in `iosApp/iosApp/swiftTestFixtures/SwiftRepository.swift` and `iosApp/iosApp/swiftTestFixtures/SwiftRepositoryMultipleChoice.swift`.
 
 ## Maintenance Rules
 
