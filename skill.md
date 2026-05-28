@@ -213,12 +213,21 @@ Do not rely on:
 
 The repository already contains fixtures for:
 - Swift cross-language super gutters UI tests in `iosApp/iosApp/swiftTestFixtures`.
+- Swift completion UI tests in `iosApp/iosApp/swiftTestFixtures`.
+- Kotlin declarations exported to Swift for completion UI tests in `shared/src/iosMain/kotlin/org/jetbrains/kmptestdata/kotlinTestFixtures`.
 
 Do not duplicate existing super gutter scenarios unless:
 - extending coverage meaningfully,
 - or testing a different IDE behavior.
 
 Prefer reusing patterns and naming conventions from existing fixtures.
+
+For completion fixtures:
+- keep consumer functions as stable edit anchors,
+- describe probes with `Type:` and `Expect:` comments,
+- do not pre-create symbols that are meant to test "added after project open" behavior,
+- place Kotlin declarations that specifically test Swift/iOS export behavior under `iosMain`,
+- verify lookup item presence, not ranking.
 
 ---
 
