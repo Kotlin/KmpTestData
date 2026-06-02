@@ -17,6 +17,6 @@ interface ExistingKotlinSourceContract {
 }
 
 enum class ExistingKotlinSourceMode {
-    existingReady,
-    existingPaused
+    READY,
+    PAUSED
 }
