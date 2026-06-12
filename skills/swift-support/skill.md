@@ -1,4 +1,9 @@
-# skill.md
+---
+name: kmp-swift-support-test-data
+description: Generate minimal, stable KMP test data fixtures for Swift support and Swift ↔ Kotlin E2E UI tests in IntelliJ IDEA and Android Studio.
+---
+
+# KMP Swift Support Test Data
 
 ## Purpose
 
@@ -170,6 +175,13 @@ Avoid:
 - mixing multiple IDE features in one file,
 - large shared utility files.
 
+Prefer feature-owned source files even when fixture code is structurally similar.
+Small intentional duplication is acceptable when it keeps E2E scenarios isolated and easier to debug.
+
+Examples:
+- `SwiftCompletionSource.swift` and `SwiftGoToDeclarationSource.swift` should stay separate.
+- `KotlinCompletionSource.kt` and `KotlinGoToDeclarationSource.kt` should stay separate.
+
 Only modify existing fixtures if:
 - the requested feature logically belongs there,
 - or the fixture already represents the same IDE behavior.
@@ -212,9 +224,9 @@ Do not rely on:
 # Existing Fixture Awareness
 
 The repository already contains fixtures for:
-- Swift cross-language super gutters UI tests in `iosApp/iosApp/swiftTestFixtures`.
-- Swift completion UI tests in `iosApp/iosApp/swiftTestFixtures`.
-- Kotlin declarations exported to Swift for completion UI tests in `shared/src/iosMain/kotlin/org/jetbrains/kmptestdata/kotlinTestFixtures`.
+- Swift cross-language super gutters UI tests in `../../iosApp/iosApp/swiftTestFixtures`.
+- Swift completion UI tests in `../../iosApp/iosApp/swiftTestFixtures`.
+- Kotlin declarations exported to Swift for completion UI tests in `../../shared/src/iosMain/kotlin/org/jetbrains/kmptestdata/kotlinTestFixtures`.
 
 Do not duplicate existing super gutter scenarios unless:
 - extending coverage meaningfully,
