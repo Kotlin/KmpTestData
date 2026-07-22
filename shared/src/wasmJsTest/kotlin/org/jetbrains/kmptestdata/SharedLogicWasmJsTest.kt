@@ -4,7 +4,7 @@ import kotlin.test.Test
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
 
-class SharedLogicAndroidHostTest {
+class SharedLogicWasmJsTest {
 
     @Test
     fun example1() {
@@ -12,12 +12,12 @@ class SharedLogicAndroidHostTest {
     }
 
     @Test
-    fun example2() {
-        assertContains(Greeting().greet(), "Android")
+    fun testExample2() {
+        assertContains(Greeting().greet(), "Wasm")
     }
 
     @Test
-    fun example3_fail() {
-        assertContains(Greeting().greet(), "Not Android")
+    fun testExample3_fail() {
+        assertContains(Greeting().greet(), "Not Wasm")
     }
 }

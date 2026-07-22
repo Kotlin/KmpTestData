@@ -4,20 +4,20 @@ import kotlin.test.Test
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
 
-class SharedLogicIOSTest {
+class SharedLogicWebTest {
 
     @Test
-    fun example1() {
+    fun example() {
         assertEquals(3, 1 + 2)
     }
 
     @Test
-    fun example2() {
-        assertContains(Greeting().greet(), "iOS")
+    fun testExampleWasm() {
+        assertContains(Greeting().greet(), "Wasm")
     }
 
     @Test
-    fun example3_fail() {
-        assertContains(Greeting().greet(), "Not iOS")
+    fun testExampleJs() {
+        assertContains(Greeting().greet(), "Chrome")
     }
 }
