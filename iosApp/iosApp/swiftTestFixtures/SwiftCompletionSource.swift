@@ -17,8 +17,8 @@ struct ExistingSourceType {
 }
 
 enum ExistingSourceMode {
-    case existingReady
-    case existingPaused
+    case ready
+    case paused
 }
 
 let existingTopLevelValue = "topLevel"

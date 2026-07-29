@@ -20,8 +20,8 @@ func consumeExistingSwiftCompletion() {
             source.existingMember
           Expect: existingMemberValue, existingMemberFunction().
         • Enum case completion:
-          Type: let mode: ExistingSourceMode = .existing
-          Expect: existingReady, existingPaused.
+          Type: let mode: ExistingSourceMode = .
+          Expect: ready, paused.
     */
 
 }
@@ -62,8 +62,8 @@ func consumeExistingKotlinCompletion() {
             source.existingKotlinContract
           Expect: existingKotlinContractFunction().
         • Enum case completion:
-          Type: let mode: ExistingKotlinSourceMode = .existing
-          Expect: existingReady, existingPaused.
+          Type: let mode: ExistingKotlinSourceMode = .
+          Expect: ready, paused.
         • Top-level function completion:
           Type: KotlinCompletionSourceKt.existingKotlinTopLevel
           Expect: existingKotlinTopLevelFunction().
@@ -88,8 +88,8 @@ func consumeAddedSwiftCompletion() {
             source.addedMember
           Expect: addedMemberValue, addedMemberFunction().
         • Enum case completion:
-          Type: let mode: AddedSourceMode = .added
-          Expect: addedReady, addedPaused.
+          Type: let mode: AddedSourceMode = .
+          Expect: ready, paused.
     */
 
 }
@@ -116,8 +116,8 @@ func consumeAddedKotlinCompletion() {
             source.addedKotlinContract
           Expect: addedKotlinContractFunction().
         • Enum case completion:
-          Type: let mode: AddedKotlinSourceMode = .added
-          Expect: addedReady, addedPaused.
+          Type: let mode: AddedKotlinSourceMode = .
+          Expect: ready, paused.
         • Top-level function completion:
           Type: AddedKotlinCompletionSourceKt.addedKotlinTopLevel
           Expect: addedKotlinTopLevelFunction().
