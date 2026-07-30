@@ -126,9 +126,6 @@ func consumeExistingKotlinGoToDeclaration() {
         • Enum type navigation:
           Go to declaration from: ExistingKotlinGoToDeclarationSourceMode
           Expect: enum class ExistingKotlinGoToDeclarationSourceMode.
-        • Enum case navigation:
-          Go to declaration from: ExistingKotlinGoToDeclarationSourceMode.ready
-          Expect: READY.
     */
 
     _ = KotlinGoToDeclarationSourceKt.existingKotlinDeclarationTopLevelFunction()
@@ -173,9 +170,6 @@ func consumeAddedKotlinGoToDeclaration() {
         • Enum type navigation:
           Go to declaration from: AddedKotlinGoToDeclarationSourceMode
           Expect: enum class AddedKotlinGoToDeclarationSourceMode.
-        • Enum case navigation:
-          Go to declaration from: AddedKotlinGoToDeclarationSourceMode.ready
-          Expect: READY.
     */
 
 }
