@@ -47,6 +47,7 @@ Existing Kotlin declarations live under `iosMain` because these scenarios target
 
 The Swift Go To Declaration fixtures cover navigation from Swift usage sites to user-defined Swift declarations, Swift module declarations, Kotlin declarations exported to Swift, and edit-time anchors for symbols added after project opening.
 For Swift module symbols, tests should assert the resolved declaration name instead of a physical SDK file path.
+Kotlin enum classes exported to Swift are covered only at enum type level. Enum entries are exposed through Objective-C interop as static properties in the generated Objective-C header, so Go To Declaration for entries such as `ready` naturally resolves to `Shared.h` rather than to the original Kotlin enum entry. See the Kotlin Swift Interopedia enum class notes: https://github.com/kotlin-hands-on/kotlin-swift-interopedia/blob/main/docs/classesandinterfaces/Enum%20classes.md.
 
 | Case | Consumer anchor | Source file | Usage anchor | Expected destination |
 | --- | --- | --- | --- | --- |
@@ -76,7 +77,6 @@ For Swift module symbols, tests should assert the resolved declaration name inst
 | Existing Kotlin interface | `consumeExistingKotlinGoToDeclaration()` | `KotlinGoToDeclarationSource.kt` | `ExistingKotlinGoToDeclarationSourceContract` | `interface ExistingKotlinGoToDeclarationSourceContract` |
 | Existing Kotlin interface member | `consumeExistingKotlinGoToDeclaration()` | `KotlinGoToDeclarationSource.kt` | `contract.existingKotlinDeclarationContractFunction()` | `fun existingKotlinDeclarationContractFunction()` |
 | Existing Kotlin enum type | `consumeExistingKotlinGoToDeclaration()` | `KotlinGoToDeclarationSource.kt` | `ExistingKotlinGoToDeclarationSourceMode` | `enum class ExistingKotlinGoToDeclarationSourceMode` |
-| Existing Kotlin enum case | `consumeExistingKotlinGoToDeclaration()` | `KotlinGoToDeclarationSource.kt` | `ExistingKotlinGoToDeclarationSourceMode.ready` | `READY` |
 | Added Kotlin file facade | `consumeAddedKotlinGoToDeclaration()` | Runtime-created `shared/src/iosMain/kotlin/org/jetbrains/kmptestdata/kotlinTestFixtures/AddedKotlinGoToDeclarationSource.kt` | `AddedKotlinGoToDeclarationSourceKt` | `AddedKotlinGoToDeclarationSource.kt` |
 | Added Kotlin top-level function | `consumeAddedKotlinGoToDeclaration()` | Runtime-created `AddedKotlinGoToDeclarationSource.kt` | `AddedKotlinGoToDeclarationSourceKt.addedKotlinDeclarationTopLevelFunction()` | `fun addedKotlinDeclarationTopLevelFunction()` |
 | Added Kotlin class | `consumeAddedKotlinGoToDeclaration()` | Runtime-created `AddedKotlinGoToDeclarationSource.kt` | `AddedKotlinGoToDeclarationSourceType` | `class AddedKotlinGoToDeclarationSourceType` |
@@ -85,7 +85,6 @@ For Swift module symbols, tests should assert the resolved declaration name inst
 | Added Kotlin interface | `consumeAddedKotlinGoToDeclaration()` | Runtime-created `AddedKotlinGoToDeclarationSource.kt` | `AddedKotlinGoToDeclarationSourceContract` | `interface AddedKotlinGoToDeclarationSourceContract` |
 | Added Kotlin interface member | `consumeAddedKotlinGoToDeclaration()` | Runtime-created `AddedKotlinGoToDeclarationSource.kt` | `contract.addedKotlinDeclarationContractFunction()` | `fun addedKotlinDeclarationContractFunction()` |
 | Added Kotlin enum type | `consumeAddedKotlinGoToDeclaration()` | Runtime-created `AddedKotlinGoToDeclarationSource.kt` | `AddedKotlinGoToDeclarationSourceMode` | `enum class AddedKotlinGoToDeclarationSourceMode` |
-| Added Kotlin enum case | `consumeAddedKotlinGoToDeclaration()` | Runtime-created `AddedKotlinGoToDeclarationSource.kt` | `AddedKotlinGoToDeclarationSourceMode.ready` | `READY` |
 
 ### Swift Super-Gutter Navigation
 
