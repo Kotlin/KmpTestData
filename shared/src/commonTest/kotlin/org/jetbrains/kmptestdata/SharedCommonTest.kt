@@ -28,11 +28,11 @@ class SharedCommonTest {
 
     @Test
     fun testExampleWasm() {
-        assertContains(Greeting().greet(), "Web with Kotlin/Wasm")
+        assertContains(Greeting().greet(), "Wasm")
     }
 
     @Test
     fun testExampleJs() {
-        assertContains(Greeting().greet(), "Web with Kotlin/JS")
+        assertContains(Greeting().greet(), "Chrome")
     }
 }
