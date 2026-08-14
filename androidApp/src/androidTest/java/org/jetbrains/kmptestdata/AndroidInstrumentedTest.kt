@@ -19,6 +19,7 @@ class AndroidInstrumentedTest {
     @Test
     fun useAppContext() {
         // Context of the app under test.
+        Thread.sleep(30000)
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("org.jetbrains.kmptestdata", appContext.packageName)
     }
@@ -27,7 +28,7 @@ class AndroidInstrumentedTest {
     fun useAppContext2() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.and3123", appContext.packageName)
+        assertEquals("org.jetbrains.kmptestdata", appContext.packageName)
     }
 
     @Test
