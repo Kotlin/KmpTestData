@@ -8,6 +8,7 @@ class SharedLogicWebTest {
 
     @Test
     fun example() {
+        var a = Greeting().greet()
         assertEquals(3, 1 + 2)
     }
 
