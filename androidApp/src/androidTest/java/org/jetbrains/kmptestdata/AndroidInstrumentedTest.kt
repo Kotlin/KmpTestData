@@ -17,11 +17,10 @@ import org.junit.Assert.*
 @RunWith(AndroidJUnit4::class)
 class AndroidInstrumentedTest {
     @Test
-    fun useAppContext() {
+    fun useAppContext1() {
         // Context of the app under test.
-        Thread.sleep(30000)
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("org.jetbrains.kmptestdata", appContext.packageName)
+        assertEquals("test", appContext.packageName)
     }
 
     @Test
@@ -29,11 +28,5 @@ class AndroidInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("org.jetbrains.kmptestdata", appContext.packageName)
-    }
-
-    @Test
-
-    fun checkAndroidVersion() {
-        assertEquals(35, Build.VERSION.SDK_INT)
     }
 }
