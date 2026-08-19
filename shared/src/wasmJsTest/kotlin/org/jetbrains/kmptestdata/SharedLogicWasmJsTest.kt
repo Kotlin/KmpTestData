@@ -8,6 +8,7 @@ class SharedLogicWasmJsTest {
 
     @Test
     fun example1() {
+        var a = Greeting().greet()
         assertEquals(3, 1 + 2)
     }
 
