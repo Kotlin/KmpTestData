@@ -18,14 +18,14 @@ import org.junit.Assert.*
 class AndroidInstrumentedTest {
     @Test
     fun useAppContext1() {
-        // Context of the app under test.
+        var a = Greeting().greet()
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("test", appContext.packageName)
     }
 
     @Test
     fun useAppContext2() {
-        // Context of the app under test.
+        var a = Greeting().greet()
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("org.jetbrains.kmptestdata", appContext.packageName)
     }
