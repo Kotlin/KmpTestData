@@ -18,22 +18,22 @@ class SharedCommonTest {
     }
 
     @Test
-    fun testExampleAndroid() {
+    fun exampleAndroid() {
         assertContains(Greeting().greet(), "Android")
     }
 
     @Test
-    fun testExampleJava() {
+    fun exampleJava() {
         assertContains(Greeting().greet(), "Java")
     }
 
     @Test
-    fun testExampleWasm() {
+    fun exampleWasm() {
         assertContains(Greeting().greet(), "Wasm")
     }
 
     @Test
-    fun testExampleJs() {
+    fun exampleJs() {
         assertContains(Greeting().greet(), "Chrome")
     }
 }

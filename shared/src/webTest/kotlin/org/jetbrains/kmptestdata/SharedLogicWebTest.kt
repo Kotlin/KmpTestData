@@ -13,12 +13,12 @@ class SharedLogicWebTest {
     }
 
     @Test
-    fun testExampleWasm() {
+    fun exampleWasm() {
         assertContains(Greeting().greet(), "Wasm")
     }
 
     @Test
-    fun testExampleJs() {
+    fun exampleJs() {
         assertContains(Greeting().greet(), "Chrome")
     }
 }

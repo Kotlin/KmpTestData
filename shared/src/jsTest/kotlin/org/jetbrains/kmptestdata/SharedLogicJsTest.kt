@@ -13,12 +13,12 @@ class SharedLogicJsTest {
     }
 
     @Test
-    fun testExample2() {
+    fun example2() {
         assertContains(Greeting().greet(), "Chrome")
     }
 
     @Test
-    fun testExample3_fail() {
+    fun example3_fail() {
         assertContains(Greeting().greet(), "Not Chrome")
     }
 }
